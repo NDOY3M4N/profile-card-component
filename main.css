@@ -83,7 +83,7 @@ img { width: 100%; }
   overflow: hidden;
 }
 
-.card__top {
+.card__bg {
   padding-bottom: 50%;
   background-image: url('images/bg-pattern-card.svg');
   background-repeat: no-repeat;
@@ -101,23 +101,23 @@ img { width: 100%; }
   transform: translateY(-50%);
 }
 
-.card__content__top {
+.card__main {
   margin-top: -1.5rem;
   text-align: center;
   padding-bottom: 1.5rem;
 }
 
-.card__content__top span {
+.card__main span {
   font-weight: 400;
   color: var(--dark-grayish-blue);
 }
 
-.card__content__top p {
+.card__main p {
   margin-top: .5rem;
   color: var(--dark-grayish-blue);
 }
 
-.card__content__bottom {
+.card__footer {
   padding: 1.5rem 2rem;
   border-top: 1px solid #e8e8e8;
   display: flex;
@@ -126,7 +126,7 @@ img { width: 100%; }
   text-align: center;
 }
 
-.card__content__bottom span {
+.card__footer span {
   color: var(--dark-grayish-blue);
   font-size: 12px;
 }
