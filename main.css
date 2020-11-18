@@ -24,7 +24,9 @@ body {
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 100%;
   font-weight: 400;
-  background-color: var(--dark-cyan);
+  background: url('images/bg-pattern-bottom.svg'), url('images/bg-pattern-top.svg'), var(--dark-cyan);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left calc(40vw + 25%) top calc(72vh - 10vw), right calc(47vw + 15%) bottom calc(65vh - 15vw);  /* Literally copied from ApplePieGiraffe's solution */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -47,35 +49,6 @@ img { width: 100%; }
 }
 
 /* Page Styles */
-.bg-abstract {
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.bg-abstract::before,
-.bg-abstract::after {
-  position: absolute;
-  z-index: -1;
-}
-
-.bg-abstract::before {
-  content: url('images/bg-pattern-top.svg');
-  top: 0;
-  left: 0;
-  transform: translate(-70%, -70%);
-  
-}
-.bg-abstract::after {
-  content: url('images/bg-pattern-bottom.svg');
-  bottom: 0;
-  right: 0;
-  transform: translate(70%, 70%);
-}
-
 .card {
   background: #fff;
   width: 100%;
@@ -135,14 +108,4 @@ img { width: 100%; }
   background: #fff;
   width: 100%;
   padding: 1rem 0;
-}
-/* Meddia Queries */
-@media (min-width: 800px) {
-  .bg-abstract::before {
-    transform: translate(-50%, -50%);
-    
-  }
-  .bg-abstract::after {
-    transform: translate(50%, 50%);
-  }
 }
